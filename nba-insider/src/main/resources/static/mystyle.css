@@ -1,0 +1,14 @@
+#logo {
+  background-color: rgba(221, 204, 204, 0);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+body {
+  max-width: 600;
+  max-height: 600;
+}
+#generate {
+  left: 50%;  
+}
