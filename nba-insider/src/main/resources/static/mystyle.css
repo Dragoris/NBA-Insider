@@ -1,14 +1,49 @@
-#logo {
+.logo {
   background-color: rgba(221, 204, 204, 0);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: fit-content;
 }
 body {
-  max-width: 600;
-  max-height: 600;
+  max-width: 600px;
 }
-#generate {
-  left: 50%;  
+.title {
+  color: #FF6700;
+  font-family: Cooper Std Black;
+  font-size: 50px;  
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  align-items: center;
+}
+.button-wrapper {
+
+}
+.hidden {
+  display: none;
+}
+
+.generate{
+  display:inline-block;
+  padding:02em 3em;
+  border-radius: 6px;
+  border:0.16em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  color:dodgerblue;
+  text-align:center;
+  transition: all 0.15s;
+  }
+.generate:hover {
+  
 }
