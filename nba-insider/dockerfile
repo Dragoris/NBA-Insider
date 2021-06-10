@@ -1,0 +1,4 @@
+FROM openjdk:16
+COPY . /usr/src/nba-insider
+WORKDIR /usr/src/nba-insider
+CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
