@@ -7,4 +7,8 @@ function myFunction() {
 function teamButton(){
   alert('hellothere!')
   document.getElementById("myDropdown").classList.toggle("show");
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
