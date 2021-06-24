@@ -5,9 +5,7 @@
   margin-right: auto;
   width: fit-content;
 }
-body {
-  max-width: 812px;
-}
+
 .primary-screen{
   display: flex;
   flex-direction: column;
@@ -20,21 +18,26 @@ body {
 }
 .hidden {
   display: none;
+
 }
+
 .team-dropdown-content{
   display: none
+
 }
+
 .middle-team-bar{
   border-radius: 10px;
-    border: black;
-    border-style: solid;
-    padding: 20px;
-    width: 131px;
-    height: 32px;
-    margin: 5px;
-    text-align: center;
-    font: 200;
-    font-family: fantasy;
+  border: 10px black solid;
+  border-width: medium;
+  padding: 20px;
+  width: 39vw;
+  height: 7vw;
+  margin: 5px;
+  text-align: center;
+  font-size: 30px;
+  font-family: fantasy;
+
 }
 #team-1-image {
   background-color: blue;
@@ -45,9 +48,6 @@ body {
   background-color: yellow;
 
 }
-#page-2{
-  
-}
 
 .base-bball{
   max-width: fit-content;
@@ -55,57 +55,61 @@ body {
     border: black;
     border-style: solid;
     padding: 10;
-    width: 69px;
+    width: 8vh;
     margin: 10px;
+
 }
 .base-bball:hover {
   opacity:0.5;
+
 }
 
 
-.trade-buttons{
-  
+.trade-buttons-bar{
   position: fixed;
   bottom: 5px;
   width: fit-content;
+
 }
-.back-button{
+#back-button{
   background-image: url('png/home-solid.svg');
   background-color: DodgerBlue; /* Blue background */
   background-repeat: no-repeat;
-  border: none; /* Remove borders */
-  color: dodgerblue; /* White text */
+  /*border: none;
+  color: dodgerblue; 
   padding: 12px 16px; 
   font-size: 16px; 
   cursor: pointer; 
-  margin: 10px;
+  margin: 10px;*/
+  
 }
 
-.reset{
+#reset{
   background-image: url('png/trash-alt-solid.svg');
   background-color: DodgerBlue; /* Blue background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
+  /*border: none;  
+  color: white; 
   padding: 12px 16px; 
   font-size: 16px; 
   cursor: pointer; 
-  margin: 10px;
+  margin: 10px;*/
+
 }
 
-.execute-trade{
+#execute-trade{
   background-image: url('png/hands-helping-solid.svg');
   background-repeat: no-repeat;
   background-color: DodgerBlue; /* Blue background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
+  /*border: none;
+  color: white;
   padding: 12px 16px; 
   font-size: 16px; 
   cursor: pointer; 
-  margin: 10px;
+  margin: 10px;*/
+
 }
 
 .team-buttons-image-bar{
-  display: inline;
   display: flex;
   width: fit-content;
   flex-wrap: nowrap;
@@ -114,12 +118,24 @@ body {
   align-content: space-around;
   justify-content: space-evenly;
   align-items: center;
+
 }
-/*.primary-screen {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: white;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}*/
+
+.app {
+  width: 100vh;
+  height: 100vh;
+
+}
+
+.trade-buttons{
+  width: 20vh;
+  height: 16vh;
+  border: none;
+  color: white;
+  padding: 12px 16px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  margin: 10px;
+  border-radius: 11px;
+
+}

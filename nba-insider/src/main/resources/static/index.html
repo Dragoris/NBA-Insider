@@ -11,44 +11,42 @@
   </head>
 
   <body>
-    <div class="primary-screen" id="page-1">
-      <div>
-        <img class="logo" src="png/warriors_w_transparent.png" alt="Warriors logo">
+    <div class="app">
+      <div class="primary-screen" id="page-1">
+        <div>
+          <img class="logo" src="png/warriors_w_transparent.png" alt="Warriors logo">
+        </div>
+        <div class="title">
+          trades-R-US WHERE IS THE GHOST???112
+        </div>
+        <div class="button-wrapper">
+          <button onclick="secondPage()" class="generate" type="button">Generate Tradez</button>
+        </div>
       </div>
-      <div class="title">
-        trades-R-US WHERE IS THE GHOST?
-      </div>
-      <div class="button-wrapper">
-        <button onclick="myFunction()" class="generate" type="button">Generate Tradez</button>
-      </div>
-    </div>
-    <div class="hidden" id="page-2">
-      <div class="team-buttons-bar">
-        <div class="team-buttons-image-bar">
-          <img class="base-bball" id="team-1-image" src="png/bball.svg" alt="team one image" onclick="teamButton()">
-          <div class="middle-team-bar">
-            Create a trade!
+      <div class="hidden" id="page-2">
+        <div class="team-buttons-bar">
+          <div class="team-buttons-image-bar">
+            <img class="base-bball" id="team-1-image" src="png/bball.svg" alt="team one image" onclick="playerTog()">
+            <div class="middle-team-bar">
+              Create a trade!
+            </div>
+            <img class="base-bball" id="team-2-image" src="png/bball.svg" alt="team two image" onclick="playerTog()">
           </div>
-          <img class="base-bball" id="team-2-image" src="png/bball.svg" alt="team two image" onclick="teamButton()">
+        </div>
+        <div class="trade-buttons-bar">
+          <button id="back-button" class="trade-buttons"></button>
+          <button id="execute-trade" class="trade-buttons" type="submit"></button>
+          <button id="reset" class="trade-buttons" type="reset"></button>
+        </div>
+      </div>
+      <div class="team-dropdown">
+        <div id="team-dropdown-choices" class="team-dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </div>
-    <div class="team-dropdown">
-      <div id="team-dropdown-choices" class="team-dropdown-content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-      <div class="trade-buttons">
-        <button class="back-button"></button>
-        <button class="execute trade" type="submit"></button>
-        <button class="reset" type="reset"></button>
-      </div>
-    
   </body>
-
+  <!--asynchronous call javascript xhr request --->
 </html>
