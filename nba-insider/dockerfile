@@ -1,4 +1,9 @@
-FROM openjdk:16
+FROM openjdk:16 as base
 COPY . /usr/src/nba-insider
 WORKDIR /usr/src/nba-insider
+
+FROM base as test
+CMD ["./mvnw", "test"]
+
+FROM base as prod
 CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
