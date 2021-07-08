@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS teams (
+	teamName VARCHAR(10) NOT NULL,
+	teamstats VARCHAR(100) NOT NULL
+);
