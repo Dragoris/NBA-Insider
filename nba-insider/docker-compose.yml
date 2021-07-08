@@ -1,0 +1,20 @@
+services:
+        web:
+                image: nba
+                ports:
+                        - "8080:8080"
+                networks:
+                        - nbaNetwork
+                depends_on:
+                        - mysqldb
+
+        mysqldb:
+                image: mysql
+                networks:
+                        - nbaNetwork
+                environment:
+                        - MYSQL_ROOT_PASSWORD=KickAss1
+                        - MYSQL_DATABASE=nbadb
+
+networks:
+        nbaNetwork:
