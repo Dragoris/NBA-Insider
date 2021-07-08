@@ -1,20 +1,25 @@
+
+
 .logo {
   background-color: rgba(221, 204, 204, 0);
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
+
 }
 
 .primary-screen{
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .title {
   color: #FF6700;
   font-family: Cooper Std Black;
   font-size: 50px;
+
 }
 .hidden {
   display: none;
@@ -23,6 +28,14 @@
 
 .team-dropdown-content{
   display: none
+
+}
+.trade-zone{
+  height: 70vh;
+
+}
+
+#page-2 {
 
 }
 
@@ -39,7 +52,7 @@
   font-family: fantasy;
 
 }
-#team-1-image {
+#team-1 {
   background-color: blue;
 
 }
@@ -54,88 +67,96 @@
     border-radius: 11px;
     border: black;
     border-style: solid;
-    padding: 10;
+    padding: 10px;
     width: 8vh;
-    margin: 10px;
+
 
 }
+
 .base-bball:hover {
   opacity:0.5;
 
 }
 
 
-.trade-buttons-bar{
-  position: fixed;
-  bottom: 5px;
-  width: fit-content;
+.app-footer{
+  display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: center;
 
 }
+
 #back-button{
   background-image: url('png/home-solid.svg');
-  background-color: DodgerBlue; /* Blue background */
+  background-color: DodgerBlue;
   background-repeat: no-repeat;
-  /*border: none;
-  color: dodgerblue; 
-  padding: 12px 16px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  margin: 10px;*/
-  
+
 }
 
 #reset{
   background-image: url('png/trash-alt-solid.svg');
-  background-color: DodgerBlue; /* Blue background */
-  /*border: none;  
-  color: white; 
-  padding: 12px 16px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  margin: 10px;*/
-
+  background-color: DodgerBlue;
+  background-repeat: no-repeat;
 }
 
 #execute-trade{
   background-image: url('png/hands-helping-solid.svg');
   background-repeat: no-repeat;
-  background-color: DodgerBlue; /* Blue background */
-  /*border: none;
-  color: white;
-  padding: 12px 16px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  margin: 10px;*/
+  background-color: DodgerBlue;
+
 
 }
 
 .team-buttons-image-bar{
   display: flex;
-  width: fit-content;
   flex-wrap: nowrap;
-  flex-direction: row;
-  width: fit-content;
-  align-content: space-around;
-  justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 
 }
 
 .app {
-  width: 100vh;
-  height: 100vh;
-
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: none;
 }
 
 .trade-buttons{
-  width: 20vh;
-  height: 16vh;
-  border: none;
-  color: white;
-  padding: 12px 16px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  margin: 10px;
-  border-radius: 11px;
+  width: 13vh;
+  height: 16vw;
+  margin-left: 51px;
 
+}
+
+.dropdown-content  {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: hidden;
+  overflow-y: scroll;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height: 70vh;
+
+}
+
+.dropdown-content li {
+  list-style: none;
+  
+ }
+
+.team-logo{
+  width: 186px;
+  padding: 2px;
+  margin: 10px;
+  box-shadow: 2px 2px 10px #888;
+}
+
+.show {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -17,36 +17,44 @@
           <img class="logo" src="png/warriors_w_transparent.png" alt="Warriors logo">
         </div>
         <div class="title">
-          trades-R-US WHERE IS THE GHOST???112
+          trades-R-US
         </div>
         <div class="button-wrapper">
-          <button onclick="secondPage()" class="generate" type="button">Generate Tradez</button>
+          <button onclick="secondPage()" class="generate" type="button">Generate Trade</button>
         </div>
       </div>
       <div class="hidden" id="page-2">
         <div class="team-buttons-bar">
           <div class="team-buttons-image-bar">
-            <img class="base-bball" id="team-1-image" src="png/bball.svg" alt="team one image" onclick="playerTog()">
+            <div>
+              <img class="base-bball" id="team-1" src="png/bball.svg" alt="team one image" onclick="choosePlayerButton(this.id)">
+              
+            </div>
             <div class="middle-team-bar">
               Create a trade!
             </div>
-            <img class="base-bball" id="team-2-image" src="png/bball.svg" alt="team two image" onclick="playerTog()">
+            <div>
+              <img class="base-bball" id="team-2" src="png/bball.svg" alt="team two image" onClick="choosePlayerButton(this.id)">
+              
+            </div>
           </div>
         </div>
-        <div class="trade-buttons-bar">
-          <button id="back-button" class="trade-buttons"></button>
-          <button id="execute-trade" class="trade-buttons" type="submit"></button>
-          <button id="reset" class="trade-buttons" type="reset"></button>
+        <div class="trade-zone">
+          <div class="dropdown-content" id="team-1-dropdown">
+          </div>
+          <div class="dropdown-content" id='team-2-dropdown'>
+          </div>
         </div>
-      </div>
-      <div class="team-dropdown">
-        <div id="team-dropdown-choices" class="team-dropdown-content">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
+        
       </div>
     </div>
+    <footer class="trade-buttons-bar">
+      <ul>
+        <button id="back-button" class="trade-buttons"></button>
+        <button id="execute-trade" class="trade-buttons" type="submit"></button>
+        <button id="reset" class="trade-buttons" type="reset"></button>
+      </ul>
+    </footer>
   </body>
-  <!--asynchronous call javascript xhr request --->
 </html>
+
