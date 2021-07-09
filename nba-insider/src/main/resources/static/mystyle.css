@@ -78,6 +78,26 @@
 
 }
 
+#player-dropdown {
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  height: 70vh;
+  min-width: 160px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#player-dropdown li {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  margin: 10px;
+  padding: 10px;
+}
+
+#player-dropdown image {
+  height: 25px;
+}
 
 .app-footer{
   display: flex;
@@ -130,6 +150,13 @@
 
 }
 
+.team-buttons-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
 .dropdown-content  {
   display: none;
   position: absolute;
@@ -159,4 +186,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.show-players {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
 }

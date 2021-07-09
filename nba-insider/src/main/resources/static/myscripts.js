@@ -33,18 +33,28 @@ function choosePlayerButton(id) {
 }
 
 function teamPlayers(id) {
-  let playerList = ''
-  
-  team = Object.keys(globalJsonObject[`${id}`])
+  let playerList = '<ul>'
+  console.log(id)
+  let team = Object.keys(globalJsonObject[`${id}`])
+  let team1 = document.getElementById("team-1-dropdown"); //used to remove from the dom
+  let team2 = document.getElementById("team-2-dropdown"); // need to find a cleaner way...
   team.forEach(player => {
-    console.log(player)
-    let photo = globalJsonObject[`${id}`][`${player}`].Pic
     if (player != "Logo"){
-      let img = `<img class="player-photo' src="https://www.basketball-reference.com/req/202106291/images/players/${photo}.jpg" `
-      console.log(img)
+      
+      let photo = globalJsonObject[`${id}`][`${player}`].Pic
+      let name = globalJsonObject[`${id}`][`${player}`].Name
+      let img = `<img src="https://www.basketball-reference.com/req/202106291/images/players/${photo}.jpg" class="player-photo'>`
+      playerList += `<li title="${name}">${img}</li>`
+      console.log(player, photo, name)
     }
 
   });
+  playerList += '</ul>' 
+  team1.classList.remove("show") //used to remove from the dom
+  team2.classList.remove("show") // need to find a cleaner way...
+  document.getElementById("player-dropdown").innerHTML = playerList
+  document.getElementById("player-dropdown").classList.toggle("show-players");
+  
 }
 //ideas for menu: desktop keep team logos on side as you select players
 
