@@ -15,12 +15,14 @@
   align-items: center;
 
 }
+
 .title {
   color: #FF6700;
   font-family: Cooper Std Black;
   font-size: 50px;
 
 }
+
 .hidden {
   display: none;
 
@@ -30,21 +32,18 @@
   display: none
 
 }
+
 .trade-zone{
   height: 70vh;
 
 }
 
-#page-2 {
-
-}
-
-.middle-team-bar{
+#middle-team-bar{
   border-radius: 10px;
   border: 10px black solid;
   border-width: medium;
   padding: 20px;
-  width: 39vw;
+  width: 40vw;
   height: 7vw;
   margin: 5px;
   text-align: center;
@@ -52,6 +51,7 @@
   font-family: fantasy;
 
 }
+
 #team-1 {
   background-color: blue;
 
@@ -63,12 +63,11 @@
 }
 
 .base-bball{
-  max-width: fit-content;
-    border-radius: 11px;
-    border: black;
-    border-style: solid;
-    padding: 10px;
-    width: 8vh;
+  border-radius: 11px;
+  border: black;
+  border-style: solid;
+  padding: 10px;
+  width: 8vh;
 
 
 }
@@ -89,14 +88,22 @@
 
 #player-dropdown li {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   margin: 10px;
   padding: 10px;
 }
 
+.player-info {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  
+}
+
 #player-dropdown image {
   height: 25px;
+
 }
 
 .app-footer{
@@ -106,6 +113,11 @@
     align-content: stretch;
     justify-content: center;
 
+}
+
+.app-footer > button{
+justify-content: space-around;
+    
 }
 
 #back-button{
@@ -124,7 +136,7 @@
 #execute-trade{
   background-image: url('png/hands-helping-solid.svg');
   background-repeat: no-repeat;
-  background-color: DodgerBlue;
+  background-color: rgb(134, 145, 156);
 
 
 }
@@ -141,12 +153,13 @@
   margin: 0 auto;
   padding: 10px;
   overflow: none;
+
 }
 
-.trade-buttons{
+.trade-buttons {
   width: 13vh;
   height: 16vw;
-  margin-left: 51px;
+  border-radius: 12px;
 
 }
 
@@ -170,9 +183,12 @@
 
 }
 
-.dropdown-content li {
-  list-style: none;
-  
+.player-cards {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  margin: 5px;
+  flex: 0;
+  padding: 5px;
+
  }
 
 .team-logo{
@@ -180,16 +196,19 @@
   padding: 2px;
   margin: 10px;
   box-shadow: 2px 2px 10px #888;
+
 }
 
 .show {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .show-players {
   display: flex;
   flex-wrap: nowrap;
   justify-content: left;
+
 }

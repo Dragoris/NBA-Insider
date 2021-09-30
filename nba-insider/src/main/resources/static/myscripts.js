@@ -33,23 +33,22 @@ function choosePlayerButton(id) {
 }
 
 function teamPlayers(id) {
-  let playerList = '<ul>'
-  console.log(id)
+  let playerList = ''
   let team = Object.keys(globalJsonObject[`${id}`])
   let team1 = document.getElementById("team-1-dropdown"); //used to remove from the dom
   let team2 = document.getElementById("team-2-dropdown"); // need to find a cleaner way...
   team.forEach(player => {
     if (player != "Logo"){
-      
-      let photo = globalJsonObject[`${id}`][`${player}`].Pic
-      let name = globalJsonObject[`${id}`][`${player}`].Name
-      let img = `<img src="https://www.basketball-reference.com/req/202106291/images/players/${photo}.jpg" class="player-photo'>`
-      playerList += `<li title="${name}">${img}</li>`
-      console.log(player, photo, name)
+      let playerID = globalJsonObject[`${id}`][`${player}`]
+      let photo = playerID.Pic
+      let name = playerID.Name
+      let img = `<img src="https://www.basketball-reference.com/req/202106291/images/players/${photo}.jpg" class="player-photo">`
+      playerList += `<div class="player-cards" title="${name}">${img}<div class="player-info"><p>Name: ${name}</p><p>Position: ${playerID.Pos}</p><p>Salary: ${playerID.Salary}</p></div></div>`
+      console.log(player, name)
     }
 
   });
-  playerList += '</ul>' 
+  
   team1.classList.remove("show") //used to remove from the dom
   team2.classList.remove("show") // need to find a cleaner way...
   document.getElementById("player-dropdown").innerHTML = playerList

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="mystyle.css">
@@ -9,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   </head>
-
   <body>
     <div class="app">
       <div class="primary-screen" id="page-1">
@@ -17,7 +15,7 @@
           <img class="logo" src="png/warriors_w_transparent.png" alt="Warriors logo">
         </div>
         <div class="title">
-          trades-R-USz
+          trades-R-US
         </div>
         <div class="button-wrapper">
           <button onclick="secondPage()" class="generate" type="button">Generate Trade</button>
@@ -28,14 +26,12 @@
           <div class="team-buttons-image-bar">
             <div>
               <img class="base-bball" id="team-1" src="png/bball.svg" alt="team one image" onclick="choosePlayerButton(this.id)">
-              
             </div>
-            <div class="middle-team-bar">
+            <div id="middle-team-bar" class="base-bball">
               Create a trade!
             </div>
             <div>
               <img class="base-bball" id="team-2" src="png/bball.svg" alt="team two image" onClick="choosePlayerButton(this.id)">
-              
             </div>
           </div>
         </div>
@@ -46,7 +42,6 @@
           </div>
           <div id="player-dropdown"></div>
         </div>
-        
       </div>
     </div>
     <footer class="app-footer">
