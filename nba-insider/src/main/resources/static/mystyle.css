@@ -42,9 +42,9 @@
   border-radius: 10px;
   border: 10px black solid;
   border-width: medium;
-  padding: 20px;
+  padding:10px;
   width: 40vw;
-  height: 7vw;
+  height: 8vh;
   margin: 5px;
   text-align: center;
   font-size: 30px;
@@ -67,8 +67,8 @@
   border: black;
   border-style: solid;
   padding: 10px;
-  width: 8vh;
-
+  height: 8vh;
+  margin: 5px;
 
 }
 
@@ -78,12 +78,14 @@
 }
 
 #player-dropdown {
-
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   height: 70vh;
   min-width: 160px;
   overflow: hidden;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  
 }
 
 #player-dropdown li {
@@ -108,38 +110,14 @@
 
 .app-footer{
   display: flex;
-    align-items: stretch;
-    flex-direction: row;
-    align-content: stretch;
-    justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: center;
 
 }
 
-.app-footer > button{
-justify-content: space-around;
-    
-}
 
-#back-button{
-  background-image: url('png/home-solid.svg');
-  background-color: DodgerBlue;
-  background-repeat: no-repeat;
-
-}
-
-#reset{
-  background-image: url('png/trash-alt-solid.svg');
-  background-color: DodgerBlue;
-  background-repeat: no-repeat;
-}
-
-#execute-trade{
-  background-image: url('png/hands-helping-solid.svg');
-  background-repeat: no-repeat;
-  background-color: rgb(134, 145, 156);
-
-
-}
 
 .team-buttons-image-bar{
   display: flex;
@@ -156,12 +134,6 @@ justify-content: space-around;
 
 }
 
-.trade-buttons {
-  width: 13vh;
-  height: 16vw;
-  border-radius: 12px;
-
-}
 
 .team-buttons-bar {
   display: flex;

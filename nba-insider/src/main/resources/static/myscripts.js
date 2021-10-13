@@ -42,9 +42,10 @@ function teamPlayers(id) {
       let playerID = globalJsonObject[`${id}`][`${player}`]
       let photo = playerID.Pic
       let name = playerID.Name
+      
       let img = `<img src="https://www.basketball-reference.com/req/202106291/images/players/${photo}.jpg" class="player-photo">`
-      playerList += `<div class="player-cards" title="${name}">${img}<div class="player-info"><p>Name: ${name}</p><p>Position: ${playerID.Pos}</p><p>Salary: ${playerID.Salary}</p></div></div>`
-      console.log(player, name)
+      playerList += `<div onclick="selectedPlayers(this.title)" class="player-cards" title="${name}, ${id}">${img}<div class="player-info"><p>Name: ${name}</p><p>Position:
+      ${playerID.Pos}</p><p>Salary: ${playerID.Salary}</p></div></div>`
     }
 
   });
@@ -55,7 +56,11 @@ function teamPlayers(id) {
   document.getElementById("player-dropdown").classList.toggle("show-players");
   
 }
+
+function selectedPlayers(data){
+  console.log(data)
+}
 //ideas for menu: desktop keep team logos on side as you select players
 
 //on phone when you select a team players pop up and teams icons disapear. click team button starts over, back to team button locked at top of toggle. 
-//flex box a few rows 
+//flex box a few rows
