@@ -9,9 +9,11 @@ services:
                         - mysqldb
 
         mysqldb:
-                image: mysql
+                image: mysql:8.0.23
                 networks:
                         - nbaNetwork
+                ports:
+                        - "3306:3306"
                 environment:
                         - MYSQL_ROOT_PASSWORD=password
                         - MYSQL_DATABASE=db
