@@ -13,8 +13,8 @@ services:
                 networks:
                         - nbaNetwork
                 environment:
-                        - MYSQL_ROOT_PASSWORD=KickAss1
-                        - MYSQL_DATABASE=nbadb
+                        - MYSQL_ROOT_PASSWORD=password
+                        - MYSQL_DATABASE=db
 
 networks:
         nbaNetwork:
