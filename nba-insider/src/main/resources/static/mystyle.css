@@ -53,12 +53,10 @@
 }
 
 #team-1 {
-  background-color: blue;
 
 }
 
 #team-2-image {
-  background-color: yellow;
 
 }
 
@@ -85,6 +83,7 @@
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   
 }
 
@@ -100,6 +99,11 @@
   display: flex;
   flex-direction: column;
   margin: 10px;
+  
+}
+
+.player-info p {
+  margin: 3px;
   
 }
 
@@ -152,6 +156,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   height: 70vh;
+  list-style: none;
 
 }
 
@@ -162,6 +167,9 @@
   padding: 5px;
 
  }
+
+
+
 
 .team-logo{
   width: 186px;
@@ -182,5 +190,14 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: left;
+  list-style: none;
 
+}
+
+@media screen and (max-width: 375px) {
+  .team-logo {
+  width: 137px;
+  
+  }
+  
 }
