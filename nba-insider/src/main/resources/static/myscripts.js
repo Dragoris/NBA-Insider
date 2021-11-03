@@ -3,8 +3,13 @@ let globalJsonObject = {}
 let teamState = {
   state:'',
   "teamOne": {
+    franchise:'',
+    picks:[]
   },
   "teamTwo": {
+    franchise:'',
+    picks:[]
+
   },
 }
 
@@ -27,9 +32,9 @@ function jason(method, url) {
   get.send();
 }
 
-function choosePlayerButton(buttonID) {
+function chooseTeamButton(buttonID) {
+  
   teamState.state=buttonID
-  console.log("state=", teamState.state)
   let toggle = ''
   teamNames = Object.keys(globalJsonObject).sort()
   teamNames.forEach(team => {
@@ -38,14 +43,17 @@ function choosePlayerButton(buttonID) {
   });
   document.getElementById(`${buttonID}-dropdown`).innerHTML = toggle
   document.getElementById(`${buttonID}-dropdown`).classList.toggle("show");
+  
    
 }
 
 function teamPlayers(id) {
+  teamState.state == "teamOne" ? teamState.teamOne.franchise = id : teamState.teamTwo.franchise =id;
+  document.getElementById(teamState.state).src = `https://d2p3bygnnzw9w3.cloudfront.net/req/202106153/tlogo/bbr/${id}-2021.png`
   let playerList = ''
   let team = Object.keys(globalJsonObject[`${id}`])
-  let team1 = document.getElementById("team-1-dropdown"); //used to remove from the dom
-  let team2 = document.getElementById("team-2-dropdown"); // need to find a cleaner way...
+  let team1 = document.getElementById("teamOne-dropdown"); //used to remove from the dom
+  let team2 = document.getElementById("teamTwo-dropdown"); // need to find a cleaner way...
   team.forEach(player => {
     if (player != "Logo"){
       let playerID = globalJsonObject[`${id}`][`${player}`]
@@ -66,14 +74,20 @@ function teamPlayers(id) {
 }
 
 function reset() {
-  document.getElementById(`team-1-dropdown`).innerHTML =''
-  document.getElementById(`team-2-dropdown`).innerHTML =''
+  document.getElementById(`teamOne-dropdown`).innerHTML =''
+  document.getElementById(`teamTwo-dropdown`).innerHTML =''
   document.getElementById("player-dropdown").innerHTML =''
+  document.getElementById('teamOne').src = 'png/bball.svg'
+  document.getElementById('teamTwo').src = 'png/bball.svg'
 }
 
-function selectedPlayers(title, id){
-  let a = document.getElementsByClassName("player-cards")
-  console.log(title, id)
+function selectedPlayers(name){
+  let whichTeam = teamState.state
+  teamState[whichTeam].picks.includes(name) ? teamState[whichTeam].picks = teamState[whichTeam].picks.filter(player => player !== name)
+   : teamState[whichTeam].picks.push(name);
+  console.log(teamState.teamOne.picks, teamState[whichTeam].picks.includes(name))
+
+  
 }
 //ideas for menu: desktop keep team logos on side as you select players
 
