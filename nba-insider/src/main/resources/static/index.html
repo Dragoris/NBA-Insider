@@ -23,17 +23,15 @@
       </div>
       <div class="hidden" id="page-2">
         <div class="team-buttons-bar">
-          <div class="team-buttons-image-bar">
-            <div>
+            <div class="bar">
               <img class="base-bball" id="teamOne" src="png/bball.svg" alt="team one image" onclick="chooseTeamButton(this.id)">
             </div>
-            <div id="middle-team-bar" class="base-bball">
+            <!--<div id="middle-team-bar" class="base-bball">
               Create a trade!
-            </div>
-            <div>
+            </div>-->
+            <div class="bar">
               <img class="base-bball" id="teamTwo" src="png/bball.svg" alt="team two image" onclick="chooseTeamButton(this.id)">
             </div>
-          </div>
         </div>
         <div class="trade-zone">
           <div class="dropdown-content" id="teamOne-dropdown">
@@ -45,7 +43,7 @@
       </div>
     </div>
     <footer class="app-footer">
-        <button>Back</button>
+        <button onclick ="back()">Back</button>
         <button>Execute Trade</button>
         <button onclick="reset()" id="reset"> Reset</button>
     </footer>

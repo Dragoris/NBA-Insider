@@ -6,6 +6,7 @@ let teamState = {
     franchise:'',
     picks:[]
   },
+
   "teamTwo": {
     franchise:'',
     picks:[]
@@ -44,7 +45,8 @@ function chooseTeamButton(buttonID) {
   });
   document.getElementById(`${buttonID}-dropdown`).innerHTML = toggle
   document.getElementById(`${buttonID}-dropdown`).classList.toggle("show");
-  
+  const element = document.getElementById(buttonID);
+   element.classList.toggle("selected")
 }
 
 function teamPlayers(id) {
@@ -62,16 +64,18 @@ function teamPlayers(id) {
       const photo = playerID.Pic;
       const name = playerID.Name;
       const img = `<img src="https://www.basketball-reference.com/req/202106291/images/players/${photo}.jpg" class="player-photo">`;
-      playerList += `<div onclick="selectedPlayers(this.id)" class="player-cards" id="${name}", title="${name}, ${id}">${img}<div class="player-info"><p>Name: ${name}</p><p>Salary: ${playerID.Salary}</p></div></div>`;
+      playerList += `<div onclick="selectedPlayers(this.id)" class="player-cards" id="${name}", title="${name}, ${id}">${img}<div class="player-info">
+      <div><p><b>${name}</b></p></div> <div><p><b>${playerID.Salary}</b></p></div></div></div>`;
 
     }
+
   });
 
   team1.classList.remove("show"); //used to remove from the dom
   team2.classList.remove("show"); // need to find a cleaner way...
   document.getElementById("player-dropdown").innerHTML = playerList;
   document.getElementById("player-dropdown").classList.toggle("show-players");
-  
+  displaySelected()
 }
 
 function resetPicks (teamReset) {
@@ -94,13 +98,30 @@ function reset() {
 
 }
 
+function back () {
+  document.getElementById(`teamOne-dropdown`).innerHTML ='';
+  document.getElementById(`teamTwo-dropdown`).innerHTML ='';
+  document.getElementById(`player-dropdown`).innerHTML ='Hello there!'
+}
+
 //add players if they have been selected but remove if they were
 function selectedPlayers (name) {
   const whichTeam = teamState.state;
   const isPlayerOnTeam = teamState[whichTeam].picks.includes(name);
   if (isPlayerOnTeam) {teamState[whichTeam].picks = teamState[whichTeam].picks.filter(player => player !== name)} 
   else {teamState[whichTeam].picks.push(name)} 
+  displaySelected();
+  const element = document.getElementById(name);
+  element.classList.toggle("selected")
 
+  //const cssObj = window.getComputedStyle(element, null).backgroundColor;
+  //console.log(cssObj)
+}
+
+function displaySelected() {
+  let state = teamState.state
+  teamState[state].picks.forEach((a) => console.log(a))
+  
 }
 //ideas for menu: desktop keep team logos on side as you select players
 
